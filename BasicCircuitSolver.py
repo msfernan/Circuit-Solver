@@ -648,7 +648,7 @@ def allResistorsConnected(canvas):#Working explained in isLegalCircuit
         vsnode=canvas.data.board[vrow][vcol]
         gnode=canvas.data.board[grow][gcol]
         if(not((rsnode,renode)==(vsnode,gnode) or
-            (rsnode,renode)==(gnode,vsngetNodesode))):
+            (rsnode,renode)==(gnode,vsnode))):
             errMsg+="R%d "%(temp.index(r)+1)
         canvas.data.wireList.append((srow,scol,erow,ecol))
     canvas.data.resistorList=copy.copy(canvas.data.tempResistorList)
